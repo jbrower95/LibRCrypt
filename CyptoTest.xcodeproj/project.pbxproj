@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D058ED7915BD05CE006C6152 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D058ED7815BD05CE006C6152 /* UIKit.framework */; };
+		D058ED7B15BD05CE006C6152 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D058ED7A15BD05CE006C6152 /* Foundation.framework */; };
+		D058ED7D15BD05CE006C6152 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D058ED7C15BD05CE006C6152 /* CoreGraphics.framework */; };
+		D058ED8315BD05CE006C6152 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D058ED8115BD05CE006C6152 /* InfoPlist.strings */; };
+		D058ED8515BD05CE006C6152 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D058ED8415BD05CE006C6152 /* main.m */; };
+		D058ED8915BD05CE006C6152 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D058ED8815BD05CE006C6152 /* AppDelegate.m */; };
+		D058ED8C15BD05CE006C6152 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D058ED8B15BD05CE006C6152 /* ViewController.m */; };
+		D058ED8F15BD05CE006C6152 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = D058ED8D15BD05CE006C6152 /* ViewController_iPhone.xib */; };
+		D058ED9215BD05CE006C6152 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D058ED9015BD05CE006C6152 /* ViewController_iPad.xib */; };
+		D058ED9A15BD05CE006C6152 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D058ED9915BD05CE006C6152 /* SenTestingKit.framework */; };
+		D058ED9B15BD05CE006C6152 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D058ED7815BD05CE006C6152 /* UIKit.framework */; };
+		D058ED9C15BD05CE006C6152 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D058ED7A15BD05CE006C6152 /* Foundation.framework */; };
+		D058EDA415BD05CE006C6152 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D058EDA215BD05CE006C6152 /* InfoPlist.strings */; };
+		D058EDA715BD05CE006C6152 /* CyptoTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D058EDA615BD05CE006C6152 /* CyptoTestTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D058ED9D15BD05CE006C6152 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D058ED6B15BD05CE006C6152 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D058ED7315BD05CE006C6152;
+			remoteInfo = CyptoTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D058ED7415BD05CE006C6152 /* CyptoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyptoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D058ED7815BD05CE006C6152 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D058ED7A15BD05CE006C6152 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D058ED7C15BD05CE006C6152 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D058ED8015BD05CE006C6152 /* CyptoTest-Info.plist */ = {isa = PBXFileReference; path = "CyptoTest-Info.plist"; sourceTree = "<group>"; };
+		D058ED8215BD05CE006C6152 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D058ED8415BD05CE006C6152 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D058ED8615BD05CE006C6152 /* CyptoTest-Prefix.pch */ = {isa = PBXFileReference; path = "CyptoTest-Prefix.pch"; sourceTree = "<group>"; };
+		D058ED8715BD05CE006C6152 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		D058ED8815BD05CE006C6152 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D058ED8A15BD05CE006C6152 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		D058ED8B15BD05CE006C6152 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D058ED8E15BD05CE006C6152 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		D058ED9115BD05CE006C6152 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		D058ED9815BD05CE006C6152 /* CyptoTestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyptoTestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D058ED9915BD05CE006C6152 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		D058EDA115BD05CE006C6152 /* CyptoTestTests-Info.plist */ = {isa = PBXFileReference; path = "CyptoTestTests-Info.plist"; sourceTree = "<group>"; };
+		D058EDA315BD05CE006C6152 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D058EDA515BD05CE006C6152 /* CyptoTestTests.h */ = {isa = PBXFileReference; path = CyptoTestTests.h; sourceTree = "<group>"; };
+		D058EDA615BD05CE006C6152 /* CyptoTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CyptoTestTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D058ED7115BD05CE006C6152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D058ED7915BD05CE006C6152 /* UIKit.framework in Frameworks */,
+				D058ED7B15BD05CE006C6152 /* Foundation.framework in Frameworks */,
+				D058ED7D15BD05CE006C6152 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D058ED9415BD05CE006C6152 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D058ED9A15BD05CE006C6152 /* SenTestingKit.framework in Frameworks */,
+				D058ED9B15BD05CE006C6152 /* UIKit.framework in Frameworks */,
+				D058ED9C15BD05CE006C6152 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D058ED6915BD05CE006C6152 = {
+			isa = PBXGroup;
+			children = (
+				D058ED7E15BD05CE006C6152 /* CyptoTest */,
+				D058ED9F15BD05CE006C6152 /* CyptoTestTests */,
+				D058ED7715BD05CE006C6152 /* Frameworks */,
+				D058ED7515BD05CE006C6152 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D058ED7515BD05CE006C6152 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D058ED7415BD05CE006C6152 /* CyptoTest.app */,
+				D058ED9815BD05CE006C6152 /* CyptoTestTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D058ED7715BD05CE006C6152 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D058ED7815BD05CE006C6152 /* UIKit.framework */,
+				D058ED7A15BD05CE006C6152 /* Foundation.framework */,
+				D058ED7C15BD05CE006C6152 /* CoreGraphics.framework */,
+				D058ED9915BD05CE006C6152 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D058ED7E15BD05CE006C6152 /* CyptoTest */ = {
+			isa = PBXGroup;
+			children = (
+				D058ED8715BD05CE006C6152 /* AppDelegate.h */,
+				D058ED8815BD05CE006C6152 /* AppDelegate.m */,
+				D058ED8A15BD05CE006C6152 /* ViewController.h */,
+				D058ED8B15BD05CE006C6152 /* ViewController.m */,
+				D058ED8D15BD05CE006C6152 /* ViewController_iPhone.xib */,
+				D058ED9015BD05CE006C6152 /* ViewController_iPad.xib */,
+				D058ED7F15BD05CE006C6152 /* Supporting Files */,
+			);
+			path = CyptoTest;
+			sourceTree = "<group>";
+		};
+		D058ED7F15BD05CE006C6152 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D058ED8015BD05CE006C6152 /* CyptoTest-Info.plist */,
+				D058ED8115BD05CE006C6152 /* InfoPlist.strings */,
+				D058ED8415BD05CE006C6152 /* main.m */,
+				D058ED8615BD05CE006C6152 /* CyptoTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D058ED9F15BD05CE006C6152 /* CyptoTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				D058EDA515BD05CE006C6152 /* CyptoTestTests.h */,
+				D058EDA615BD05CE006C6152 /* CyptoTestTests.m */,
+				D058EDA015BD05CE006C6152 /* Supporting Files */,
+			);
+			path = CyptoTestTests;
+			sourceTree = "<group>";
+		};
+		D058EDA015BD05CE006C6152 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D058EDA115BD05CE006C6152 /* CyptoTestTests-Info.plist */,
+				D058EDA215BD05CE006C6152 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D058ED7315BD05CE006C6152 /* CyptoTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D058EDAA15BD05CE006C6152 /* Build configuration list for PBXNativeTarget "CyptoTest" */;
+			buildPhases = (
+				D058ED7015BD05CE006C6152 /* Sources */,
+				D058ED7115BD05CE006C6152 /* Frameworks */,
+				D058ED7215BD05CE006C6152 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CyptoTest;
+			productName = CyptoTest;
+			productReference = D058ED7415BD05CE006C6152 /* CyptoTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D058ED9715BD05CE006C6152 /* CyptoTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D058EDAD15BD05CE006C6152 /* Build configuration list for PBXNativeTarget "CyptoTestTests" */;
+			buildPhases = (
+				D058ED9315BD05CE006C6152 /* Sources */,
+				D058ED9415BD05CE006C6152 /* Frameworks */,
+				D058ED9515BD05CE006C6152 /* Resources */,
+				D058ED9615BD05CE006C6152 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D058ED9E15BD05CE006C6152 /* PBXTargetDependency */,
+			);
+			name = CyptoTestTests;
+			productName = CyptoTestTests;
+			productReference = D058ED9815BD05CE006C6152 /* CyptoTestTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D058ED6B15BD05CE006C6152 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = D058ED6E15BD05CE006C6152 /* Build configuration list for PBXProject "CyptoTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D058ED6915BD05CE006C6152;
+			productRefGroup = D058ED7515BD05CE006C6152 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D058ED7315BD05CE006C6152 /* CyptoTest */,
+				D058ED9715BD05CE006C6152 /* CyptoTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D058ED7215BD05CE006C6152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D058ED8315BD05CE006C6152 /* InfoPlist.strings in Resources */,
+				D058ED8F15BD05CE006C6152 /* ViewController_iPhone.xib in Resources */,
+				D058ED9215BD05CE006C6152 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D058ED9515BD05CE006C6152 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D058EDA415BD05CE006C6152 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D058ED9615BD05CE006C6152 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D058ED7015BD05CE006C6152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D058ED8515BD05CE006C6152 /* main.m in Sources */,
+				D058ED8915BD05CE006C6152 /* AppDelegate.m in Sources */,
+				D058ED8C15BD05CE006C6152 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D058ED9315BD05CE006C6152 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D058EDA715BD05CE006C6152 /* CyptoTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D058ED9E15BD05CE006C6152 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D058ED7315BD05CE006C6152 /* CyptoTest */;
+			targetProxy = D058ED9D15BD05CE006C6152 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D058ED8115BD05CE006C6152 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D058ED8215BD05CE006C6152 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D058ED8D15BD05CE006C6152 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D058ED8E15BD05CE006C6152 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		D058ED9015BD05CE006C6152 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D058ED9115BD05CE006C6152 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		D058EDA215BD05CE006C6152 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D058EDA315BD05CE006C6152 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D058EDA815BD05CE006C6152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D058EDA915BD05CE006C6152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D058EDAB15BD05CE006C6152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CyptoTest/CyptoTest-Prefix.pch";
+				INFOPLIST_FILE = "CyptoTest/CyptoTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D058EDAC15BD05CE006C6152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CyptoTest/CyptoTest-Prefix.pch";
+				INFOPLIST_FILE = "CyptoTest/CyptoTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D058EDAE15BD05CE006C6152 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CyptoTest.app/CyptoTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CyptoTest/CyptoTest-Prefix.pch";
+				INFOPLIST_FILE = "CyptoTestTests/CyptoTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		D058EDAF15BD05CE006C6152 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CyptoTest.app/CyptoTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CyptoTest/CyptoTest-Prefix.pch";
+				INFOPLIST_FILE = "CyptoTestTests/CyptoTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D058ED6E15BD05CE006C6152 /* Build configuration list for PBXProject "CyptoTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D058EDA815BD05CE006C6152 /* Debug */,
+				D058EDA915BD05CE006C6152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D058EDAA15BD05CE006C6152 /* Build configuration list for PBXNativeTarget "CyptoTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D058EDAB15BD05CE006C6152 /* Debug */,
+				D058EDAC15BD05CE006C6152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D058EDAD15BD05CE006C6152 /* Build configuration list for PBXNativeTarget "CyptoTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D058EDAE15BD05CE006C6152 /* Debug */,
+				D058EDAF15BD05CE006C6152 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D058ED6B15BD05CE006C6152 /* Project object */;
+}
