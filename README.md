@@ -5,7 +5,7 @@ An Objective-C library for data encryption based on 3 dimensional rotations of d
 
 The idea's pretty simple: If you represent data as the squares on a rubix cube, you can apply transformations to the data
 and get back completely encrypted data -- all of which is commutatitive. Just as a rubix cube can be solved if you know 
-all of the movies, this data can be "unwound", so to speak, if you know all of the transforms applied. Except, the encryption
+all of the moves, this data can be "unwound", so to speak, if you know all of the transforms applied. Except, the encryption
 is even deeper than that.
 
 The whole concept of a cube can only cover (9 squares per face x 6 faces) 54 significant bits of data. Therefore, compressed
