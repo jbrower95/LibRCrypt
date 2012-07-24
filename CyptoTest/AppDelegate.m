@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#include "RDefines.h"
 #import "ViewController.h"
 
 @implementation AppDelegate
@@ -33,6 +33,58 @@
     }
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    
+    
+    // RCube + RFace test
+    
+    
+    
+    NSString *data = [NSString stringWithFormat:@"1,4,3,6,4,66,4,9,7%@1,6,4,9,4,3,2,3,2%@7,4,9,5,4,7,5,6,3%@4,6,3,4,6,8,9,1,0%@4,6,4,8,3,8,9,4,6%@1,2,3,4,5,6,7,8,9",SEPERATOR,SEPERATOR,SEPERATOR,SEPERATOR,SEPERATOR];
+    
+    NSData *d = [data dataUsingEncoding:NSUTF8StringEncoding];
+    RCube *myCube = [[RCube alloc] initWithData:d];
+
+    RCubeGenerator *steve = [[RCubeGenerator alloc] init];
+    
+    [steve generateCubesForString:@"This is a test string this is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirng"];
+    
+    
+    
+    NSData *rep1 = [myCube dataForWriting];
+    
+  
+
+    [myCube applyVerticalTransformToRow:0 type:RCubeTransformTypeUp perspective:RCubePerspectiveRight];
+    [myCube applyHorizontalTransformToColumn:2 type:RCubeTransformTypeLeft perspective:RCubePerspectiveLeft];
+    
+    
+    
+    // undo the changes now, since it's commutative :)
+    
+    [myCube applyHorizontalTransformToColumn:2 type:RCubeTransformTypeRight perspective:RCubePerspectiveLeft];
+    [myCube applyVerticalTransformToRow:0 type:RCubeTransformTypeDown perspective:RCubePerspectiveRight];
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    NSData *rep2 = [myCube dataForWriting];
+      
+    if ( [rep1 isEqualToData:rep2]  )
+          {
+              NSLog(@"Transform is commutative!");
+          }
+     else {
+        NSLog(@"Transform is not commutative :(");
+          }
+    
+    
     return YES;
 }
 

@@ -21,6 +21,10 @@
 		D058ED9C15BD05CE006C6152 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D058ED7A15BD05CE006C6152 /* Foundation.framework */; };
 		D058EDA415BD05CE006C6152 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D058EDA215BD05CE006C6152 /* InfoPlist.strings */; };
 		D058EDA715BD05CE006C6152 /* CyptoTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D058EDA615BD05CE006C6152 /* CyptoTestTests.m */; };
+		D058EDB215BD05F7006C6152 /* RCube.m in Sources */ = {isa = PBXBuildFile; fileRef = D058EDB115BD05F7006C6152 /* RCube.m */; };
+		D058EDB515BD0606006C6152 /* RFace.m in Sources */ = {isa = PBXBuildFile; fileRef = D058EDB415BD0606006C6152 /* RFace.m */; };
+		D058EDB815BD0625006C6152 /* RCubeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D058EDB715BD0625006C6152 /* RCubeGenerator.m */; };
+		D058EDBB15BD0637006C6152 /* RCubeDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = D058EDBA15BD0637006C6152 /* RCubeDecoder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +42,31 @@
 		D058ED7815BD05CE006C6152 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D058ED7A15BD05CE006C6152 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D058ED7C15BD05CE006C6152 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D058ED8015BD05CE006C6152 /* CyptoTest-Info.plist */ = {isa = PBXFileReference; path = "CyptoTest-Info.plist"; sourceTree = "<group>"; };
+		D058ED8015BD05CE006C6152 /* CyptoTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CyptoTest-Info.plist"; sourceTree = "<group>"; };
 		D058ED8215BD05CE006C6152 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D058ED8415BD05CE006C6152 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D058ED8615BD05CE006C6152 /* CyptoTest-Prefix.pch */ = {isa = PBXFileReference; path = "CyptoTest-Prefix.pch"; sourceTree = "<group>"; };
-		D058ED8715BD05CE006C6152 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		D058ED8615BD05CE006C6152 /* CyptoTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CyptoTest-Prefix.pch"; sourceTree = "<group>"; };
+		D058ED8715BD05CE006C6152 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D058ED8815BD05CE006C6152 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D058ED8A15BD05CE006C6152 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		D058ED8A15BD05CE006C6152 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D058ED8B15BD05CE006C6152 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D058ED8E15BD05CE006C6152 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		D058ED9115BD05CE006C6152 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		D058ED9815BD05CE006C6152 /* CyptoTestTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyptoTestTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D058ED9915BD05CE006C6152 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		D058EDA115BD05CE006C6152 /* CyptoTestTests-Info.plist */ = {isa = PBXFileReference; path = "CyptoTestTests-Info.plist"; sourceTree = "<group>"; };
+		D058EDA115BD05CE006C6152 /* CyptoTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CyptoTestTests-Info.plist"; sourceTree = "<group>"; };
 		D058EDA315BD05CE006C6152 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D058EDA515BD05CE006C6152 /* CyptoTestTests.h */ = {isa = PBXFileReference; path = CyptoTestTests.h; sourceTree = "<group>"; };
+		D058EDA515BD05CE006C6152 /* CyptoTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CyptoTestTests.h; sourceTree = "<group>"; };
 		D058EDA615BD05CE006C6152 /* CyptoTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CyptoTestTests.m; sourceTree = "<group>"; };
+		D058EDB015BD05F7006C6152 /* RCube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCube.h; sourceTree = "<group>"; };
+		D058EDB115BD05F7006C6152 /* RCube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCube.m; sourceTree = "<group>"; };
+		D058EDB315BD0606006C6152 /* RFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFace.h; sourceTree = "<group>"; };
+		D058EDB415BD0606006C6152 /* RFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFace.m; sourceTree = "<group>"; };
+		D058EDB615BD0625006C6152 /* RCubeGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCubeGenerator.h; sourceTree = "<group>"; };
+		D058EDB715BD0625006C6152 /* RCubeGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCubeGenerator.m; sourceTree = "<group>"; };
+		D058EDB915BD0637006C6152 /* RCubeDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCubeDecoder.h; sourceTree = "<group>"; };
+		D058EDBA15BD0637006C6152 /* RCubeDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCubeDecoder.m; sourceTree = "<group>"; };
+		D058EDBC15BD10A7006C6152 /* RDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +126,7 @@
 		D058ED7E15BD05CE006C6152 /* CyptoTest */ = {
 			isa = PBXGroup;
 			children = (
+				D058EDBD15BD1395006C6152 /* LibRCrypt */,
 				D058ED8715BD05CE006C6152 /* AppDelegate.h */,
 				D058ED8815BD05CE006C6152 /* AppDelegate.m */,
 				D058ED8A15BD05CE006C6152 /* ViewController.h */,
@@ -152,6 +166,22 @@
 				D058EDA215BD05CE006C6152 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D058EDBD15BD1395006C6152 /* LibRCrypt */ = {
+			isa = PBXGroup;
+			children = (
+				D058EDBC15BD10A7006C6152 /* RDefines.h */,
+				D058EDB015BD05F7006C6152 /* RCube.h */,
+				D058EDB115BD05F7006C6152 /* RCube.m */,
+				D058EDB315BD0606006C6152 /* RFace.h */,
+				D058EDB415BD0606006C6152 /* RFace.m */,
+				D058EDB615BD0625006C6152 /* RCubeGenerator.h */,
+				D058EDB715BD0625006C6152 /* RCubeGenerator.m */,
+				D058EDB915BD0637006C6152 /* RCubeDecoder.h */,
+				D058EDBA15BD0637006C6152 /* RCubeDecoder.m */,
+			);
+			name = LibRCrypt;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +294,10 @@
 				D058ED8515BD05CE006C6152 /* main.m in Sources */,
 				D058ED8915BD05CE006C6152 /* AppDelegate.m in Sources */,
 				D058ED8C15BD05CE006C6152 /* ViewController.m in Sources */,
+				D058EDB215BD05F7006C6152 /* RCube.m in Sources */,
+				D058EDB515BD0606006C6152 /* RFace.m in Sources */,
+				D058EDB815BD0625006C6152 /* RCubeGenerator.m in Sources */,
+				D058EDBB15BD0637006C6152 /* RCubeDecoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

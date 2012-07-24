@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "RCube.h"
+#import "RFace.h"
+#import "RCubeGenerator.h"
+
 @class ViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
