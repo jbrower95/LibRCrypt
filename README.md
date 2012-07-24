@@ -1,4 +1,4 @@
-LibRCrypt
+LibRCrypt by Justin Brower
 =========
 
 An Objective-C library for data encryption based on 3 dimensional rotations of data and commutative data transforms
@@ -21,4 +21,4 @@ but the transferrable data cannot be produced as of now. This will of course be 
 
 The important part, however, is the proof of concept: data CAN be thought of as the vertices of a cube and transformed as such.
 
-
+Credits: thanks to Andrew Brennan!
