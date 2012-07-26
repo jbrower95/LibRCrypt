@@ -13,6 +13,20 @@
 @synthesize generatedCubes;
 
 
+- (NSString *)outputAsString
+{
+    NSMutableString *i = [NSMutableString string];
+    
+    for ( RCube *r in generatedCubes)
+    {
+        
+        [i appendString:[r spillData]];
+    }
+    
+    [i stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    return i;
+}
+
 
 - (void)generateCubesForString:(NSString *)input
 {
@@ -40,7 +54,7 @@
         
         last = (NSString*)str;
     }
-    printf("Smallerstrings: %d\n\n",smallerStrings.count);
+    //printf("Smallerstrings: %d\n\n",smallerStrings.count);
     
     [smallerStrings replaceObjectAtIndex:smallerStrings.count-1 withObject:last];
     
@@ -49,15 +63,16 @@
     
     // lets form these into Cubes
     
-    printf("Generating %d Cubes...\n",[smallerStrings count]);
+    //printf("Generating %d Cubes...\n",[smallerStrings count]);
     
     // generate the cubes.. seperate the strings into managable data
     
     for ( NSString *portion in smallerStrings )
     {
-        NSArray *components = [self chopString:portion intoStringsOfSize:9];
+        // portion is a 54 character portion in smallerStrings
         
-        // LOL THIS IS SO ARTSY. DIDNT EVEN REALIZE ID BE ABLE TO USE THE CHOP METHOD TWICE
+        
+        NSArray *components = [self chopString:portion intoStringsOfSize:9];
         
         // anyways, chop it into FACE sized strings
         NSMutableArray *faces = [NSMutableArray array];
@@ -72,23 +87,19 @@
             
             while ( index < a.length )
             {
-                if ( index % 9 == 0 && index != 0 )
-                {
-                    [str appendString:SEPERATOR];
-                    flopper = 0;
-                    
-                    
-                }
+                                      
+                
                 if ( flopper == 0 )
                 {
                     // draw a char from a
                     [str appendString:[a substringWithRange:NSMakeRange(index, 1)]];
                     flopper = 1;
                     index++;
+                    
                 }
                 else {
                     // we insert a ","
-                    [str appendString:@","];
+                    [str appendString:SEPERATOR];
                     flopper = 0;
                     
                 }
@@ -97,34 +108,23 @@
                 
                 
             }
-            NSLog(@"Str: %@",str);
-        
-            RFace *face = [[RFace alloc] initWithStream:str];
             
+            
+            RFace *face = [[RFace alloc] initWithStream:str];
             [faces addObject:face];
+            
+            
+
             
             if ( [faces count] == 6 )
             {
-            
             RCube *r = [[RCube alloc] initWithFaces:faces];
             [generatedCubes addObject:r];
-                [faces removeAllObjects];
+            [faces removeAllObjects];
             }
             
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+   
         
         
     }
@@ -174,7 +174,7 @@
             RV++;
             index++;
         }
-        printf("Added chunk\n");
+        //printf("Added chunk\n");
         
         [ret addObject:chunk];
       

@@ -45,7 +45,6 @@
 - (void)applyTransformsFromString:(NSString *)transformString
 {
     int ticker = 0;
-    
     // traverse through the transform string.
     
     if (transformString.length % 3 != 0 )
@@ -71,7 +70,7 @@
             // now that we have the value, cast it to currentType;
             
             currentType = (RCubeTransformType)value;
-            
+        
             ticker++;
         }
         else if ( ticker == 1)
@@ -196,7 +195,7 @@
     
     
     
-    
+    return str;
     
 }
 

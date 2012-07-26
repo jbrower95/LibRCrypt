@@ -9,11 +9,11 @@
 #ifndef CyptoTest_RDefines_h
 #define CyptoTest_RDefines_h
 
-#define SEPERATOR @"__NONE__"
+#define SEPERATOR @"__%%__"
 // this is the sequence that seperates faces of the cube when deserealized
 
 
-#define ENCRYPTION_LEVEL 120
+#define ENCRYPTION_LEVEL 10
 // the above constant * 3 = the length of the transform string
 
 // as encryption level --> inifinity, encryption becomes more and more unbreakable.

@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #import "RCube.h"
-#import "RFace.h"
 #import "RCubeGenerator.h"
+#import "RCubeDecoder.h"
 #import "NSString+XOR.h"
 @class ViewController;
 

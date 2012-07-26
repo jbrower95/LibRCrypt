@@ -88,7 +88,7 @@
     
     // stream must have length 9
     
-    NSArray *stream = [str componentsSeparatedByString:@","];
+    NSArray *stream = [str componentsSeparatedByString:SEPERATOR];
     
     if ( !([stream count] == 9) )
     {

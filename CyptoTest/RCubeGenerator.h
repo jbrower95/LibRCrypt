@@ -22,8 +22,13 @@
 
 
 
-- (void)generateCubesForString:(NSString *)input;
 
+
+
+
+- (NSString *)outputAsString;
+
+- (void)generateCubesForString:(NSString *)input;
 // this data must be packed
 
 

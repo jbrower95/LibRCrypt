@@ -10,4 +10,9 @@
 
 @interface RCubeDecoder : NSObject
 
+
+
++ (NSString *)negatingTransformStringForString:(NSString *)input;
+// this method allows a transform string's opposite transforms to be generated
+
 @end

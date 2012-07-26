@@ -37,28 +37,54 @@
     
     
     // RCube + RFace test
-    
-    
-    
-  //  NSString *data = [NSString stringWithFormat:@"1,4,3,6,4,66,4,9,7%@1,6,4,9,4,3,2,3,2%@7,4,9,5,4,7,5,6,3%@4,6,3,4,6,8,9,1,0%@4,6,4,8,3,8,9,4,6%@1,2,3,4,5,6,7,8,9",SEPERATOR,SEPERATOR,SEPERATOR,SEPERATOR,SEPERATOR];
-    
- //   NSString *data = [NSString stringWithFormat:@"t,h,i,s, ,i,s, ,m%@y,a,g,r,i,g,h,t,h%@e,r,e,b,o,y,w,h,a%@t,s,',g,o,o,o,d,m%@a,h,d,u,d,e,h,o,w%@a,r,e,y,o,u,m,a,n",SEPERATOR,SEPERATOR,SEPERATOR,SEPERATOR,SEPERATOR];
-    
-    
-   // NSData *d = [data dataUsingEncoding:NSUTF8StringEncoding];
+ 
   
     RCubeGenerator *steve = [[RCubeGenerator alloc] init];
     
-    [steve generateCubesForString:@"Hello:This is a test of the LibRCrypt API. This works. What if it's longer?"];
+    [steve generateCubesForString:@"The idea's pretty simple: If you represent data as the squares on a rubix cube you can apply transformations to the data and get back completely encrypted data -- all of which is commutatitive. Just as a rubix cube can be solved if you know all of the moves this data can be \"unwound\" so to speak if you know all of the transforms applied. Except the encryption is even deeper than that."];
     
-    RCube *myCube = [[steve generatedCubes] objectAtIndex:0];
     
-    RCube *cube2 = [[steve generatedCubes] objectAtIndex:1];
-   
-    [myCube applyRandomTransforms];
     
-   
+    RCube *cube1 = [[steve generatedCubes] objectAtIndex:0];
     
+    NSMutableArray *transforms = [NSMutableArray array];
+    
+    
+    NSString *t1 = [cube1 applyRandomTransforms];
+    
+    [transforms addObject:t1];
+    
+    for ( int i = 0; i < [[steve generatedCubes] count]; i++)
+    {
+        if ( i > 0 )
+        {
+            if ( [[steve generatedCubes] objectAtIndex:i] != nil)
+            {
+               NSString *t = [(RCube*)[[steve generatedCubes] objectAtIndex:i] applyRandomTransforms];
+                [transforms addObject:t];
+             }
+        
+        }
+    }
+    
+    
+    
+    
+    printf("---------With Transforms--------\n%s\n",[[steve outputAsString] UTF8String]);
+    // now we get back a big string for everything
+    
+    for ( int i = 0; i < [[steve generatedCubes] count]; i++)
+    {
+        NSString *t = [RCubeDecoder negatingTransformStringForString:[transforms objectAtIndex:i]];
+        
+        
+        [[[steve generatedCubes] objectAtIndex:i] applyTransformsFromString:t];
+           
+            
+    }
+    
+    
+    printf("------Negated Transforms---------\n%s\n",[[steve outputAsString] UTF8String]);
 
     
     return YES;
