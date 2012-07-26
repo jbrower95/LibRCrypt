@@ -25,6 +25,7 @@
 		D058EDB515BD0606006C6152 /* RFace.m in Sources */ = {isa = PBXBuildFile; fileRef = D058EDB415BD0606006C6152 /* RFace.m */; };
 		D058EDB815BD0625006C6152 /* RCubeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D058EDB715BD0625006C6152 /* RCubeGenerator.m */; };
 		D058EDBB15BD0637006C6152 /* RCubeDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = D058EDBA15BD0637006C6152 /* RCubeDecoder.m */; };
+		D06461D715C0FB760033248E /* NSString+XOR.m in Sources */ = {isa = PBXBuildFile; fileRef = D06461D615C0FB760033248E /* NSString+XOR.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		D058EDB915BD0637006C6152 /* RCubeDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCubeDecoder.h; sourceTree = "<group>"; };
 		D058EDBA15BD0637006C6152 /* RCubeDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCubeDecoder.m; sourceTree = "<group>"; };
 		D058EDBC15BD10A7006C6152 /* RDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDefines.h; sourceTree = "<group>"; };
+		D06461D515C0FB760033248E /* NSString+XOR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+XOR.h"; sourceTree = "<group>"; };
+		D06461D615C0FB760033248E /* NSString+XOR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+XOR.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +174,8 @@
 		D058EDBD15BD1395006C6152 /* LibRCrypt */ = {
 			isa = PBXGroup;
 			children = (
+				D06461D515C0FB760033248E /* NSString+XOR.h */,
+				D06461D615C0FB760033248E /* NSString+XOR.m */,
 				D058EDBC15BD10A7006C6152 /* RDefines.h */,
 				D058EDB015BD05F7006C6152 /* RCube.h */,
 				D058EDB115BD05F7006C6152 /* RCube.m */,
@@ -298,6 +303,7 @@
 				D058EDB515BD0606006C6152 /* RFace.m in Sources */,
 				D058EDB815BD0625006C6152 /* RCubeGenerator.m in Sources */,
 				D058EDBB15BD0637006C6152 /* RCubeDecoder.m in Sources */,
+				D06461D715C0FB760033248E /* NSString+XOR.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +481,7 @@
 				D058EDAC15BD05CE006C6152 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D058EDAD15BD05CE006C6152 /* Build configuration list for PBXNativeTarget "CyptoTestTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +490,7 @@
 				D058EDAF15BD05CE006C6152 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -24,13 +24,15 @@
 #import <Foundation/Foundation.h>
 #import "RFace.h"
 #include "RDefines.h"
+#import "NSString+XOR.h"
+
 
 typedef enum kRCubeTransformTypes {
     
     RCubeTransformTypeUp = 0,
     RCubeTransformTypeDown = 1,
-    RCubeTransformTypeLeft = 2,
-    RCubeTransformTypeRight = 3
+    RCubeTransformTypeLeft = 0,
+    RCubeTransformTypeRight = 1
 
 } RCubeTransformType;
 
@@ -96,6 +98,13 @@ typedef enum kRCubePerspective {
 
 
 // CORNERSTONE TRANSFORM METHODS. These methods provide encryption
+
+- (void)applyTransformsFromString:(NSString *)transformString;
+// allows a transform string to be used.
+
+- (NSString*)applyRandomTransforms;
+// invokes the above method with a random string
+// Return: the transform string generated
 
 
 - (void)applyVerticalTransformToRow:(int)row type:(RCubeTransformType)t perspective:(RCubePerspectiveType)perspective;

@@ -53,18 +53,10 @@
    // [steve generateCubesForString:@"This is a test string this is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirng"];
     
     
+    
     [myCube spillData];
 
-    [myCube applyVerticalTransformToRow:0 type:RCubeTransformTypeUp perspective:RCubePerspectiveRight];
-    [myCube applyHorizontalTransformToColumn:2 type:RCubeTransformTypeLeft perspective:RCubePerspectiveLeft];
-    
-      [myCube applyHorizontalTransformToColumn:1 type:RCubeTransformTypeRight perspective:RCubePerspectiveTop];
-    [myCube applyHorizontalTransformToColumn:2 type:RCubeTransformTypeLeft perspective:RCubePerspectiveRight];
-    
-    
-    [myCube spillData];
-    // undo the changes now, since it's commutative :)
-    
+    [myCube applyRandomTransforms];
   
     
     

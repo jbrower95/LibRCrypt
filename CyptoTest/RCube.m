@@ -42,6 +42,165 @@
     
 }
 
+- (void)applyTransformsFromString:(NSString *)transformString
+{
+    int ticker = 0;
+    
+    // traverse through the transform string.
+    
+    if (transformString.length % 3 != 0 )
+    {
+        printf("Error: INVALID LENGTH - Transform String (RCube applyTransformsFromString)\n");
+        return;
+    }
+    
+    for ( int i = 0; i < transformString.length; i++)
+    {
+        RCubeTransformType currentType;
+        RCubePerspectiveType currentPerspective;
+        int area;
+        
+        if ( ticker == 0)
+        {
+            // random number between 0 and 1
+            
+            // we're figuring out our type
+            
+            int value = [[transformString substringWithRange:NSMakeRange(i, 1)] intValue];
+            
+            // now that we have the value, cast it to currentType;
+            
+            currentType = (RCubeTransformType)value;
+            
+            ticker++;
+        }
+        else if ( ticker == 1)
+        {
+            // '' between 0 and 5
+            
+            int value = [[transformString substringWithRange:NSMakeRange(i, 1)] intValue];
+            currentPerspective = (RCubePerspectiveType)value;
+            
+               ticker++;
+            
+        }
+        else if ( ticker == 2 )
+        {
+            // '' between 0 and 1
+            
+            // this bit is the row/column
+            
+           area = [[transformString substringWithRange:NSMakeRange(i, 1)] intValue];
+           
+            
+            
+            ticker++;
+            
+        }
+        
+        if ( ticker == 3 )
+        {
+            
+            // apply the transform
+            
+          if ( currentType == RCubeTransformTypeUp || currentType == RCubeTransformTypeDown)
+          {
+              [self applyVerticalTransformToRow:area type:currentType perspective:currentPerspective];
+          }
+        if  (currentType == RCubeTransformTypeLeft || currentType == RCubeTransformTypeRight)
+        {
+                    [self applyHorizontalTransformToColumn:area type:currentType perspective:currentPerspective];
+        }   
+            
+            ticker = 0;
+            
+            }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+}
+
+- (NSString *)applyRandomTransforms
+{
+    
+    int length = 3 * ENCRYPTION_LEVEL;
+    
+    // max length must be a multiple of 3
+    
+    NSMutableString *str = [NSMutableString string];
+    
+    int ticker = 0;
+    
+    for ( int i = 0; i < length; i++)
+    {
+        //srand((unsigned)time(NULL));
+        
+        
+        if ( ticker == 0)
+        {
+            // random number between 0 and 1
+            int r = (arc4random() % 2 ? 0 : 1);
+            [str appendFormat:@"%d",r];
+            ticker++;
+        }
+        else if ( ticker == 1)
+        {
+            // '' between 0 and 5
+            
+            int r = arc4random() % 6;
+            [str appendFormat:@"%d",r];
+            ticker++;
+            
+        }
+        else if ( ticker == 2 )
+        {
+            // '' between 0-2 inclusive, row/column
+            
+            int r = (arc4random() % 3);
+            [str appendFormat:@"%d",r];
+            ticker++;
+            
+        }
+        
+        if ( ticker == 3 )
+        {
+            ticker = 0;
+        }
+        
+        
+        
+        
+    }
+    
+    NSLog(@"Generated Transform String: %@",str);
+    
+    [self applyTransformsFromString:str];
+    
+    
+    
+    
+    
+}
+
 
 - (void)printFormatted
 {
