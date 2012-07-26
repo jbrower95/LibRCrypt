@@ -190,7 +190,7 @@
         
     }
     
-    NSLog(@"Generated Transform String: %@",str);
+   // NSLog(@"Generated Transform String: %@",str);
     
     [self applyTransformsFromString:str];
     

@@ -49,16 +49,15 @@
   
     RCubeGenerator *steve = [[RCubeGenerator alloc] init];
     
-    [steve generateCubesForString:@"Hello:This is a test of the LibRCrypt API. This works."];
+    [steve generateCubesForString:@"Hello:This is a test of the LibRCrypt API. This works. What if it's longer?"];
     
     RCube *myCube = [[steve generatedCubes] objectAtIndex:0];
     
-    printf("Original Cube: %s\n\n",[[myCube spillData] UTF8String]);
-
+    RCube *cube2 = [[steve generatedCubes] objectAtIndex:1];
+   
     [myCube applyRandomTransforms];
     
    
-    printf("Encoded Cube With \"PASSWORD\": %s",[[[myCube spillData] stringByEncodingWithCipher:@"PASSWORD"] UTF8String]);;
     
 
     

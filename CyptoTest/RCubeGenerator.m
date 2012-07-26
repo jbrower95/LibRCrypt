@@ -21,7 +21,6 @@
         generatedCubes = [[NSMutableArray alloc] init];
     }
     
-    printf("Input length: %d\n",input.length);
     
     // we need to change it into strings of equal size
     
@@ -41,6 +40,8 @@
         
         last = (NSString*)str;
     }
+    printf("Smallerstrings: %d\n\n",smallerStrings.count);
+    
     [smallerStrings replaceObjectAtIndex:smallerStrings.count-1 withObject:last];
     
     
@@ -54,15 +55,12 @@
     
     for ( NSString *portion in smallerStrings )
     {
-        NSMutableString *data = [NSMutableString string];
-        
-        NSMutableArray *faces = [[NSMutableArray alloc] init];
-        
         NSArray *components = [self chopString:portion intoStringsOfSize:9];
         
         // LOL THIS IS SO ARTSY. DIDNT EVEN REALIZE ID BE ABLE TO USE THE CHOP METHOD TWICE
         
         // anyways, chop it into FACE sized strings
+        NSMutableArray *faces = [NSMutableArray array];
         
         for ( NSString *a in components )
         {
@@ -101,9 +99,17 @@
             }
             NSLog(@"Str: %@",str);
         
-            RCube *r = [[RCube alloc] initWithData:[str dataUsingEncoding:NSUTF8StringEncoding]];
+            RFace *face = [[RFace alloc] initWithStream:str];
+            
+            [faces addObject:face];
+            
+            if ( [faces count] == 6 )
+            {
+            
+            RCube *r = [[RCube alloc] initWithFaces:faces];
             [generatedCubes addObject:r];
-               
+                [faces removeAllObjects];
+            }
             
         }
         
@@ -145,7 +151,7 @@
         
         int RV = 0;
         
-        while ( RV < 54 )
+        while ( RV < size )
         {
             NSString *a;
             int done = 0;
@@ -168,8 +174,8 @@
             RV++;
             index++;
         }
+        printf("Added chunk\n");
         
-        printf("adding new substring: length - %d\n", [chunk length]);
         [ret addObject:chunk];
       
         
