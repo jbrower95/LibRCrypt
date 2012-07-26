@@ -29,6 +29,8 @@ typedef enum kRFaceDirection
 
 }
 @property (nonatomic, assign) int relatedFace;
+- (NSString *)cumulativeOutput;
+- (NSString *)formattedOutput;
 
 - (id)initWithFace:(RFace *)another;
 

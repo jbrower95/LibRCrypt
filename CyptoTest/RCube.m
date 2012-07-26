@@ -43,6 +43,51 @@
 }
 
 
+- (void)printFormatted
+{
+    NSArray *a = [NSArray arrayWithObjects:top,bottom,left,right,front,back,nil];
+
+    
+    printf("Logging RCube:\n--------------\n");
+    int i = 1;
+    for ( RFace *face in a)
+    {
+        printf("Face %d\n\n",i);
+        
+        
+        printf("%s\n\n",[[face formattedOutput] UTF8String]);
+        
+        
+        i++;
+        
+    }
+    
+  
+    
+}
+
+- (void)spillData
+{
+    
+    
+    NSMutableString *cumulative = [NSMutableString string];
+    
+    NSArray *a = [NSArray arrayWithObjects:top,bottom,left,right,front,back,nil];
+    
+    int i = 1;
+    for ( RFace *face in a)
+    {        
+        [cumulative appendString:[face cumulativeOutput]];
+        
+        i++;
+        
+    }
+printf("RCube: %s\n\n",[cumulative UTF8String]);
+    
+    
+}
+
+
 - (NSData *)dataForWriting
 {
     NSMutableString *cube = [NSMutableString string];

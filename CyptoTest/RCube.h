@@ -63,11 +63,40 @@ typedef enum kRCubePerspective {
 
 @property (nonatomic, retain) RFace *bottom, *top, *left, *right, *front, *back;
 
-- (NSData *)dataForWriting;
-// this method allows an cube to be packed into a stream of numbers
+// INIT METHODS
+
+
+- (id)initWithFaces:(NSArray *)faces;
+// array must contain in order: Top - Bottom - Left - Right - Front - Back
 
 - (id)initWithData:(NSData *)data;
 // this method allows a cube be *un*packed from a stream of numbers into a mangable object
+
+
+
+// DEBUG METHODS
+
+- (void)spillData;
+// a quick way to drop all of the data in the rcube as chars
+
+- (void)printFormatted;
+// a convenience function for making sure that the library works/debugging reasons
+
+
+
+
+
+// OUTPUT METHODS
+
+- (NSData *)dataForWriting;
+// this method allows an cube to be packed into a stream of numbers
+
+
+
+
+
+// CORNERSTONE TRANSFORM METHODS. These methods provide encryption
+
 
 - (void)applyVerticalTransformToRow:(int)row type:(RCubeTransformType)t perspective:(RCubePerspectiveType)perspective;
 // represents an "up" or "down" twist from multiple perspectives
@@ -75,11 +104,6 @@ typedef enum kRCubePerspective {
 
 - (void)applyHorizontalTransformToColumn:(int)column type:(RCubeTransformType)r perspective:(RCubePerspectiveType)perspective;
 // represents a "left" or "right" twist from multiple perspectives
-
-
-- (id)initWithFaces:(NSArray *)faces;
-
-// array must contain in order: Top - Bottom - Left - Right - Front - Back
 
 
 @end

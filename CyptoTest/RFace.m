@@ -18,19 +18,33 @@
     self = [super init];
     if ( self )
     {
-    self.a = chars[0];
-    self.b = chars[1];
-    self.c = chars[2];
-    self.d = chars[3];
-    self.e = chars[4];
-    self.f = chars[5];
-    self.g = chars[6];
-    self.h = chars[7];
-    self.i = chars[8];
+    self.a = (int)chars[0];
+    self.b = (int)chars[1];
+    self.c = (int)chars[2];
+    self.d = (int)chars[3];
+    self.e = (int)chars[4];
+    self.f = (int)chars[5];
+    self.g = (int)chars[6];
+    self.h = (int)chars[7];
+    self.i = (int)chars[8];
     }
     return self;
 }
 
+// different output methods
+
+- (NSString *)formattedOutput
+{
+    NSString *ret = [NSString stringWithFormat:@"%c-%c-%c\n%c-%c-%c\n%c-%c-%c",(char)a,(char)b,(char)c,(char)d,(char)e,(char)f,(char)g,(char)h,(char)i];
+    
+    return ret;
+}
+- (NSString *)cumulativeOutput
+{
+    NSString *ret = [NSString stringWithFormat:@"%c%c%c%c%c%c%c%c%c",(char)a,(char)b,(char)c,(char)d,(char)e,(char)f,(char)g,(char)h,(char)i];
+    
+    return ret;
+}
 
 - (id)initWithFace:(RFace *)another
 {
@@ -89,15 +103,17 @@
     
     // precondition: stream.length == 9
     
-    self.a = [[stream objectAtIndex:0] intValue];
-     self.b = [[stream objectAtIndex:1] intValue];
-    self.c = [[stream objectAtIndex:2] intValue];;
-     self.d = [[stream objectAtIndex:3] intValue];
-     self.e = [[stream objectAtIndex:4] intValue];
-     self.f = [[stream objectAtIndex:5] intValue];
-     self.g = [[stream objectAtIndex:6] intValue];
-     self.h = [[stream objectAtIndex:7] intValue];
-     self.i = [[stream objectAtIndex:8] intValue];
+    
+    // we can't just use intValue for this..
+    self.a = (int)[[stream objectAtIndex:0] characterAtIndex:0];
+    self.b = (int)[[stream objectAtIndex:1] characterAtIndex:0];
+    self.c = (int)[[stream objectAtIndex:2] characterAtIndex:0];
+     self.d = (int)[[stream objectAtIndex:3] characterAtIndex:0];
+     self.e = (int)[[stream objectAtIndex:4] characterAtIndex:0];
+     self.f = (int)[[stream objectAtIndex:5] characterAtIndex:0];
+     self.g = (int)[[stream objectAtIndex:6] characterAtIndex:0];
+     self.h = (int)[[stream objectAtIndex:7] characterAtIndex:0];
+     self.i = (int)[[stream objectAtIndex:8] characterAtIndex:0];
     
    // printf("Initialized Face: %d%d%d%d%d%d%d%d%d\n",a,b,c,d,e,f,g,h,i);
     
