@@ -22,5 +22,7 @@
 
 
 
+// but as ENCRYPTION_LEVEL approaches inifinity, so too does the processing time. LOL.
+
 
 #endif
