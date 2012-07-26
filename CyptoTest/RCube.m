@@ -107,10 +107,9 @@
           {
               [self applyVerticalTransformToRow:area type:currentType perspective:currentPerspective];
           }
-        if  (currentType == RCubeTransformTypeLeft || currentType == RCubeTransformTypeRight)
-        {
+           else {
                     [self applyHorizontalTransformToColumn:area type:currentType perspective:currentPerspective];
-        }   
+            }   
             
             ticker = 0;
             
@@ -158,7 +157,7 @@
         if ( ticker == 0)
         {
             // random number between 0 and 1
-            int r = (arc4random() % 2 ? 0 : 1);
+            int r = (arc4random() % 1 ? 0 : 1);
             [str appendFormat:@"%d",r];
             ticker++;
         }
@@ -225,7 +224,7 @@
     
 }
 
-- (void)spillData
+- (NSString*)spillData
 {
     
     
@@ -241,8 +240,7 @@
         i++;
         
     }
-printf("RCube: %s\n\n",[cumulative UTF8String]);
-    
+    return cumulative;
     
 }
 

@@ -11,7 +11,7 @@
 #import "RCube.h"
 #import "RFace.h"
 #import "RCubeGenerator.h"
-
+#import "NSString+XOR.h"
 @class ViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

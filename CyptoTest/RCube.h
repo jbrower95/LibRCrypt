@@ -78,7 +78,7 @@ typedef enum kRCubePerspective {
 
 // DEBUG METHODS
 
-- (void)spillData;
+- (NSString*)spillData;
 // a quick way to drop all of the data in the rcube as chars
 
 - (void)printFormatted;

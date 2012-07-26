@@ -42,29 +42,23 @@
     
   //  NSString *data = [NSString stringWithFormat:@"1,4,3,6,4,66,4,9,7%@1,6,4,9,4,3,2,3,2%@7,4,9,5,4,7,5,6,3%@4,6,3,4,6,8,9,1,0%@4,6,4,8,3,8,9,4,6%@1,2,3,4,5,6,7,8,9",SEPERATOR,SEPERATOR,SEPERATOR,SEPERATOR,SEPERATOR];
     
-    NSString *data = [NSString stringWithFormat:@"t,h,i,s,i,s,m,y,s%@w,a,g,r,i,g,h,t,h%@e,r,e,b,o,y,w,h,a%@t,s,',g,o,o,o,d,m%@a,h,d,u,d,e,h,o,w%@a,r,e,y,o,u,m,a,n",SEPERATOR,SEPERATOR,SEPERATOR,SEPERATOR,SEPERATOR];
+ //   NSString *data = [NSString stringWithFormat:@"t,h,i,s, ,i,s, ,m%@y,a,g,r,i,g,h,t,h%@e,r,e,b,o,y,w,h,a%@t,s,',g,o,o,o,d,m%@a,h,d,u,d,e,h,o,w%@a,r,e,y,o,u,m,a,n",SEPERATOR,SEPERATOR,SEPERATOR,SEPERATOR,SEPERATOR];
     
     
-    NSData *d = [data dataUsingEncoding:NSUTF8StringEncoding];
-    RCube *myCube = [[RCube alloc] initWithData:d];
-
-   // RCubeGenerator *steve = [[RCubeGenerator alloc] init];
+   // NSData *d = [data dataUsingEncoding:NSUTF8StringEncoding];
+  
+    RCubeGenerator *steve = [[RCubeGenerator alloc] init];
     
-   // [steve generateCubesForString:@"This is a test string this is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirngthis is a test stirng"];
+    [steve generateCubesForString:@"Hello:This is a test of the LibRCrypt API. This works."];
     
+    RCube *myCube = [[steve generatedCubes] objectAtIndex:0];
     
-    
-    [myCube spillData];
+    printf("Original Cube: %s\n\n",[[myCube spillData] UTF8String]);
 
     [myCube applyRandomTransforms];
-  
     
-    
-    
-    [myCube applyHorizontalTransformToColumn:2 type:RCubeTransformTypeRight perspective:RCubePerspectiveLeft];
-    [myCube applyVerticalTransformToRow:0 type:RCubeTransformTypeDown perspective:RCubePerspectiveRight];
-
-    [myCube spillData];
+   
+    printf("Encoded Cube With \"PASSWORD\": %s",[[[myCube spillData] stringByEncodingWithCipher:@"PASSWORD"] UTF8String]);;
     
 
     

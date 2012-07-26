@@ -16,6 +16,10 @@
 
 - (void)generateCubesForString:(NSString *)input
 {
+    if ( !generatedCubes )
+    {
+        generatedCubes = [[NSMutableArray alloc] init];
+    }
     
     printf("Input length: %d\n",input.length);
     
@@ -70,6 +74,13 @@
             
             while ( index < a.length )
             {
+                if ( index % 9 == 0 && index != 0 )
+                {
+                    [str appendString:SEPERATOR];
+                    flopper = 0;
+                    
+                    
+                }
                 if ( flopper == 0 )
                 {
                     // draw a char from a
@@ -80,24 +91,19 @@
                 else {
                     // we insert a ","
                     [str appendString:@","];
-                    
+                    flopper = 0;
                     
                 }
                 
-                
+          
                 
                 
             }
-            
-           RFace *face = [[RFace alloc] initWithStream:str];
-           [faces addObject:face];
-            
-            if ( faces.count == 6 )
-            {
-                RCube *r = [[RCube alloc] initWithFaces:faces];
-                [generatedCubes addObject:r];
-                [faces removeAllObjects];
-            }
+            NSLog(@"Str: %@",str);
+        
+            RCube *r = [[RCube alloc] initWithData:[str dataUsingEncoding:NSUTF8StringEncoding]];
+            [generatedCubes addObject:r];
+               
             
         }
         
