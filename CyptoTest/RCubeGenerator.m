@@ -15,11 +15,12 @@
 
 - (NSString *)outputAsString
 {
+    
     NSMutableString *i = [NSMutableString string];
     
     for ( RCube *r in generatedCubes)
     {
-        
+      
         [i appendString:[r spillData]];
     }
     
@@ -193,7 +194,58 @@
 
 
 
+- (void)encryptCubes
+{
+    
+    if ( generatedKeys == nil )
+    {
+        generatedKeys = [[NSMutableArray alloc] init];        
+    }
+    
+    for ( int i = 0; i < [generatedCubes count]; i++)
+    {
+        if ( i > 0 )
+        {
+            if ( [generatedCubes objectAtIndex:i] != nil)
+            {
+                NSString *t = [(RCube*)[generatedCubes objectAtIndex:i] applyRandomTransforms];
+                [generatedKeys addObject:t];
+            }
+            
+        }
+    }
+  
+}
 
+
+
+
+// method for outputting a transformstring XOR'd to a password
+
+
+- (NSString *)transformKeyWithPassword:(NSString *)password
+{
+    NSMutableString *tf = [NSMutableString string];
+    
+    for ( int i = 0; i < [generatedKeys count]; i++)
+    {
+        [tf appendString:[generatedKeys objectAtIndex:i]];
+    }
+    
+    NSString *output = [(NSString *)tf stringByEncodingWithCipher:password];
+    
+    return output;
+    
+}
+
+- (NSString *)cubeDataWithPassword:(NSString *)password
+{
+    NSString *data = [self outputAsString];
+    
+    data = [data stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    return [data stringByEncodingWithCipher:password];
+    
+}
 
 
 

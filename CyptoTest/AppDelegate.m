@@ -41,51 +41,17 @@
   
     RCubeGenerator *steve = [[RCubeGenerator alloc] init];
     
-    [steve generateCubesForString:@"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure? But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"];
-    
-    
-    
-    RCube *cube1 = [[steve generatedCubes] objectAtIndex:0];
-    
-    NSMutableArray *transforms = [NSMutableArray array];
-    
-    
-    NSString *t1 = [cube1 applyRandomTransforms];
-    
-    [transforms addObject:t1];
-    
-    for ( int i = 0; i < [[steve generatedCubes] count]; i++)
-    {
-        if ( i > 0 )
-        {
-            if ( [[steve generatedCubes] objectAtIndex:i] != nil)
-            {
-               NSString *t = [(RCube*)[[steve generatedCubes] objectAtIndex:i] applyRandomTransforms];
-                [transforms addObject:t];
-             }
-        
-        }
-    }
-    
-    
-    
-    
-    printf("---------With Transforms--------\n%s\n",[[steve outputAsString] UTF8String]);
-    // now we get back a big string for everything
-    
-    for ( int i = 0; i < [[steve generatedCubes] count]; i++)
-    {
-        NSString *t = [RCubeDecoder negatingTransformStringForString:[transforms objectAtIndex:i]];
-        
-        
-        [[[steve generatedCubes] objectAtIndex:i] applyTransformsFromString:t];
-           
-            
-    }
-    
-    
-    printf("------Negated Transforms---------\n%s\n",[[steve outputAsString] UTF8String]);
+    [steve generateCubesForString:@"As a describer of life and manners, he must be allowed to stand perhaps the first of the first rank. His humour, which, as Steele observes, is peculiar to himself, is so happily diffused as to give the grace of novelty to domestic scenes and daily occurrences. He never \"o'ersteps the modesty of nature,\" nor raises merriment or wonder by the violation of truth. His figures neither divert by distortion nor amaze by aggravation. He copies life with so much fidelity that he can be hardly said to invent; yet his exhibitions have an air so much original, that it is difficult to suppose them not merely the product of imagination."];
 
+    [steve encryptCubes];
+    
+    printf("Steve's encrypted cubes: %s\n",[[steve cubeDataWithPassword:@"THIS IS A TEST"] UTF8String]);
+ 
+    
+    NSString *decrypted = [RCubeDecoder decodeData:[steve cubeDataWithPassword:@"THIS IS A TEST"] withTransformKey:[steve transformKeyWithPassword:@"THIS IS A TEST"] password:@"THIS IS A TEST"];
+    printf("Decrypted: %s\n",[decrypted UTF8String]);
+    
+    
     
     return YES;
 }

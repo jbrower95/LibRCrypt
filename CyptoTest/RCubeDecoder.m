@@ -74,4 +74,65 @@
 }
 
 
+
+
+
+
+
+
++ (NSString *)decodeData:(NSString *)data withTransformKey:(NSString *)key password:(NSString *)password{
+    
+
+    // this is the cornerstone method of the class for decoding data. Returns an NSString with the resulting data
+    
+    key = [key stringByDecodingFromCipher:password];
+   
+    if ( key.length % 3 != 0 )
+    {
+        @throw [NSException exceptionWithName:@"RCubeDecoderInvalidTransformSequence" reason:@"Transform Key.length % 3 should ALWAYS = 0" userInfo:nil];
+    }
+    
+    // now that we've finished this key, lets find out the number of cubes that are encoded.
+    
+    data = [data stringByDecodingFromCipher:password];
+    RCubeGenerator *jenny = [[RCubeGenerator alloc] init];
+    [jenny generateCubesForString:data];
+    
+    // our individual length is represented by      key.length  /   (3 * cubes.count)
+    
+    
+    int tLength = key.length / (3 * [[jenny generatedCubes] count]);
+    printf("Key length: %d\n",tLength);
+    NSArray *keys = [jenny chopString:key intoStringsOfSize:tLength];
+    // now we've gotten our individual keys into an array called "keys". SUPER AWESOME.
+    
+    // now lets undo our cubes' transformations
+    int i = 0;
+    // i is our counter
+    for ( RCube *a in [jenny generatedCubes])
+    {
+        NSString *opposite = [RCubeDecoder negatingTransformStringForString:[keys objectAtIndex:i]];
+        [a applyTransformsFromString:opposite];
+        i++;
+    }
+    
+    
+    // now that we've applied our opposite transforms, we should be able to rescue the data.
+    
+    NSString *decodedData = [jenny outputAsString];
+    
+    [jenny release];
+    
+    return decodedData;
+    
+    
+}
+
+
+
+
+
+
+
+
 @end
