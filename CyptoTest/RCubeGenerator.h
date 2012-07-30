@@ -27,7 +27,7 @@
 // gives back the transformKey with an XOR'd password
 
 - (NSString *)cubeDataWithPassword:(NSString *)password;
-// same as above. self explanatory
+// returns an NSString of the cube's data with a password modulating'ly XOR'd to it
 
 - (void)encryptCubes;
 // calls applyRandomTransform() on every cube

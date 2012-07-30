@@ -35,6 +35,8 @@
     [self.window makeKeyAndVisible];
     
     
+
+    
     
     // RCube + RFace test
  
@@ -45,7 +47,7 @@
 
     [steve encryptCubes];
     
-    printf("Steve's encrypted cubes: %s\n",[[steve cubeDataWithPassword:@"THIS IS A TEST"] UTF8String]);
+    printf("Scrambled Data: %s\n",[[steve cubeDataWithPassword:@"THIS IS A TEST"] UTF8String]);
  
     
     NSString *decrypted = [RCubeDecoder decodeData:[steve cubeDataWithPassword:@"THIS IS A TEST"] withTransformKey:[steve transformKeyWithPassword:@"THIS IS A TEST"] password:@"THIS IS A TEST"];
