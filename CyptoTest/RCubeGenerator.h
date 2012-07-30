@@ -33,6 +33,7 @@
 // calls applyRandomTransform() on every cube
 
 - (NSString *)outputAsString;
+// dumps the generated Cubes as an NSString
 
 - (void)generateCubesForString:(NSString *)input;
 // this data must be packed

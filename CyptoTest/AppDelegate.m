@@ -47,12 +47,11 @@
 
     [steve encryptCubes];
     
-    printf("Scrambled Data: %s\n",[[steve outputAsString] UTF8String]);
- 
     
-    NSString *decrypted = [RCubeDecoder decodeData:[steve cubeDataWithPassword:@"THIS IS A TEST"] withTransformKey:[steve transformKeyWithPassword:@"THIS IS A TEST"] password:@"THIS IS A TEST"];
+    printf("Encrypted: %s\n",[[steve outputAsString] UTF8String]);
     
-    printf("Decrypted: %s\n",[decrypted UTF8String]);
+    
+    
     
     
     
