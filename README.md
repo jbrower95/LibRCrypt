@@ -19,6 +19,9 @@ Why Objective-C? Well, I like it. It's not as "pretty" as C, but it's object ori
 Future Plans? As of this moment, a data format has not yet been defined. The encryption algorithims are working (and are fully comutative)
 but the transferrable data cannot be produced as of now. This will of course be developed in the future.
 
+Edit: A data format HAS been defined. The encryption algorithim can generate data that can be reinterpreted and reassembled to form
+the original data. In short, it works!
+
 The important part, however, is the proof of concept: data CAN be thought of as the vertices of a cube and transformed as such.
 
 Credits: thanks to Andrew Brennan!
